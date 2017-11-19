@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Daniel Martinez <dani.dmd86@gmail.com>
+ *
+ * @package Dmd
+ * @version 1
+ */
+-->
+<config>
+    <modules>
+        <Dmd_MostExpensiveProducts>
+            <version>1.0.0</version>
+        </Dmd_MostExpensiveProducts>
+    </modules>
+    <frontend>
+        <routers>
+            <dmdmostexpensiveproducts>
+                <use>standard</use>
+                <args>
+                    <module>Dmd_MostExpensiveProducts</module>
+                    <frontName>dmdmostexpensiveproducts</frontName>
+                </args>
+            </dmdmostexpensiveproducts>
+        </routers>
+    </frontend>
+    <global>
+        <helpers>
+            <dmdmostexpensiveproducts>
+                <class>Dmd_MostExpensiveProducts_Helper</class>
+            </dmdmostexpensiveproducts>
+        </helpers>
+        <blocks>
+            <dmdmostexpensiveproducts>
+                <class>Dmd_MostExpensiveProducts_Block</class>
+            </dmdmostexpensiveproducts>
+        </blocks>
+    </global>
+</config>

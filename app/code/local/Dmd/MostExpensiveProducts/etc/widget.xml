@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Daniel Martinez <dani.dmd86@gmail.com>
+ *
+ * @package Dmd
+ * @version 1
+ */
+-->
+<widgets>
+    <widgetlinks_links type="dmdmostexpensiveproducts/product_widget_list">
+        <name>Most expensive products</name>
+        <description>Get the X most expensive products from a category</description>
+        <parameters>
+            <number_of_products translate="label">
+                <label>Number of Products to Display</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>text</type>
+                <value>3</value>
+                <sort_order>5</sort_order>
+            </number_of_products>
+            <id_path translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Category</label>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/catalog_category_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Category...</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>10</sort_order>
+            </id_path>
+            <template translate="label">
+                <required>1</required>
+                <visible>0</visible>
+                <value>dmd/product/most_expensive.phtml</value>
+                <label>Template</label>
+                <type>text</type>
+            </template>
+        </parameters>
+    </widgetlinks_links>
+</widgets>

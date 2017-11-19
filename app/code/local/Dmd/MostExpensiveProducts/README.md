@@ -1,0 +1,1 @@
+Dmd_MostExpensiveProducts module it is a widget that calculate the top most expensive products from a category.

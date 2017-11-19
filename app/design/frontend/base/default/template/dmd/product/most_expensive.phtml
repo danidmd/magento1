@@ -1,0 +1,21 @@
+<?php
+/**
+ * @author Daniel Martinez <dani.dmd86@gmail.com>
+ *
+ * @package Dmd
+ * @version 1
+ */
+$products   = $this->getProducts();
+?>
+<div class="most-expensive-products">
+    <h1><?php echo sprintf(__('Top %d most expensive products for %s'), $this->getNumberOfProductsToDisplay(), $this->getCategoryName()); ?></h1>
+    <?php if( $products ) : ?>
+        <ul>
+            <?php foreach( $products as $product) : ?>
+                <li><a href="<?php echo $product->getProductUrl(); ?>" target="_blank" title="<?php echo $product->getName(); ?>"><?php echo $product->getName(); ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php else: ?>
+        <span><?php echo __('There are no products available.'); ?></span>
+    <?php endif; ?>
+</div>
